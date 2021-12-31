@@ -1,18 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+// import modules
+import auth from './modules/auth'
+import todos from './modules/todos'
+
 Vue.use(Vuex)
 
 const storeData = {
-    state: {
-        todos: [
-            { id: 1, title: 'Viec 1', completed: false },
-            { id: 2, title: 'Viec 2', completed: true },
-            { id: 3, title: 'Viec 3', completed: false },
-        ],
-        auth: {
-            isAuthenticated: true,
-        },
+    modules: {
+        auth,
+        todos,
     },
 }
 
